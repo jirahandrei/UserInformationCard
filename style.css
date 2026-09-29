@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    padding: 20px 15px;
+
+    background:
+        radial-gradient(circle at top left, #34d399, transparent 35%),
+        radial-gradient(circle at bottom right, #10b981, transparent 35%),
+        linear-gradient(135deg, #064e3b, #065f46);
+
+    color: #1f2937;
+}
+
+
+/* Main Card */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 24px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #047857;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Left Right Layout */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+
+/* =================================
+   LEFT - INPUT SECTION
+================================= */
+
+.input-section {
+    padding: 18px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 18px;
+}
+
+.input-section h2 {
+    color: #047857;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* Form */
+#userForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 5px;
+}
+
+
+/* Email full row */
+.form-group.email-group {
+    grid-column: 1 / -1;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: white;
+    color: #1f2937;
+    font-size: 13px;
+    transition: 0.25s ease;
+}
+
+input:hover, select:hover {
+    border-color: #34d399;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* Radio Buttons */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 9px;
+    background: #dcfce7;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.radio-group label:hover {
+    background: #bbf7d0;
+    color: #047857;
+}
+
+.radio-group input {
+    width: auto;
+    accent-color: #10b981;
+}
+
+/* Buttons */
+#showInfo {
+    grid-column: 1 / -1;
+    margin-top: 5px;
+    padding: 11px;
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+    transition: 0.25s ease;
+}
+
+#showInfo:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 25px rgba(16, 185, 129, 0.4);
+}
+
+#showInfo:active {
+    transform: translateY(0);
+}
+
+
+/* =================================
+   RIGHT - OUTPUT SECTION
+================================= */
+
+.output-section {
+    padding: 25px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 18px;
+    min-height: 100%;
+}
+
+.output-section h2 {
+    text-align: center;
+    font-size: 25px;
+    color: #047857;
+    margin-bottom: 20px;
+}
+
+
+/* Information Card */
+.info-card {
+    padding: 15px;
+    background: white;
+    border: 1px solid #bbf7d0;
+    border-left: 5px solid #10b981;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Information Rows */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    font-size: 13px;
+    border-bottom: 1px solid #d1fae5;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 700;
+    color: #374151;
+}
+
+.info-value {
+    color: #111827;
+
+    text-align: right;
+
+    max-width: 55%;
+
+    word-break: break-word;
+}
+
+
+/* =================================
+   PLACEHOLDER
+================================= */
+
+.placeholder {
+    text-align: center;
+
+    color: #9ca3af;
+
+    padding: 20px;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 25px 20px;
+
+        border-radius: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    #userForm {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.email-group {
+        grid-column: 1;
+    }
+
+    #showInfo {
+        grid-column: 1;
+    }
+
+    .info-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .info-value {
+        max-width: 100%;
+
+        text-align: left;
+    }
+}
